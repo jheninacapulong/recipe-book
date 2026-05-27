@@ -1,0 +1,216 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <title>Jhenina's Recipe Book</title>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <div class="container">
+
+    <h1>Jhenina's Recipe Book</h1>
+
+    <p>Search and filter recipes.</p>
+
+    <input
+      type="text"
+      id="searchInput"
+      class="search-box"
+      placeholder="Search recipes..."
+    />
+
+    <div class="filters" id="filterButtons"></div>
+
+    <div class="recipe-grid" id="recipeGrid"></div>
+
+    <div class="empty" id="emptyState" style="display:none;">
+      No recipes found.
+    </div>
+
+  </div>
+
+  <!-- recipe data -->
+
+  <div id="recipeData" style="display:none;">
+
+    <!-- Tinolang Manok -->
+
+    <div
+      class="recipe-template"
+      data-title="Tinolang Manok"
+      data-image="https://www.kawalingpinoy.com/wp-content/uploads/2013/03/chicken-tinola-7.jpg"
+      data-tags="Filipino,Ulam,Chicken,Soup"
+      data-description="Classic Filipino chicken soup with ginger, papaya, and malunggay leaves."
+      data-ingredients='[
+        {"quantity":"1 kg","name":"Chicken","brand":"Fresh"},
+        {"quantity":"1 pc","name":"Green papaya","brand":"Fresh"},
+        {"quantity":"1 bunch","name":"Malunggay leaves","brand":"Fresh"},
+        {"quantity":"1 thumb","name":"Ginger","brand":"Fresh"},
+        {"quantity":"1 pc","name":"Onion","brand":"Fresh"}
+      ]'
+      data-instructions='[
+        "Saute garlic, onion, and ginger.",
+        "Add chicken and cook until lightly brown.",
+        "Pour water and simmer until tender.",
+        "Add papaya and cook until soft.",
+        "Add malunggay leaves and serve hot."
+      ]'
+    ></div>
+
+    <!-- Lengua -->
+
+    <div
+      class="recipe-template"
+      data-title="Lengua"
+      data-image="https://i.pinimg.com/736x/c9/32/bb/c932bb41784c257fbf1ae4565bd34730.jpg"
+      data-tags="Filipino,Ulam,Beef"
+      data-description="Creamy beef tongue dish cooked in mushroom sauce."
+      data-ingredients='[
+        {"quantity":"1 kg","name":"Beef tongue","brand":"Fresh"},
+        {"quantity":"1 can","name":"Mushrooms","brand":"Jolly"},
+        {"quantity":"1 cup","name":"All-purpose cream","brand":"Nestle"},
+        {"quantity":"1 pc","name":"Onion","brand":"Fresh"},
+        {"quantity":"2 tbsp","name":"Butter","brand":"Anchor"}
+      ]'
+      data-instructions='[
+        "Boil beef tongue until tender.",
+        "Peel and slice the tongue.",
+        "Saute onion in butter.",
+        "Add mushrooms and sliced lengua.",
+        "Pour cream and simmer before serving."
+      ]'
+    ></div>
+
+    <!-- Pumpkin Soup -->
+
+    <div
+      class="recipe-template"
+      data-title="Pumpkin Soup"
+      data-image="https://www.twopeasandtheirpod.com/wp-content/uploads/2020/10/pumpkin-soup-4.jpg"
+      data-tags="Soup,Healthy,Vegetable"
+      data-description="Creamy and healthy pumpkin soup perfect for cold weather."
+      data-ingredients='[
+        {"quantity":"1 kg","name":"Pumpkin","brand":"Fresh"},
+        {"quantity":"1 pc","name":"Onion","brand":"Fresh"},
+        {"quantity":"2 cups","name":"Vegetable broth","brand":"Knorr"},
+        {"quantity":"1 cup","name":"Cream","brand":"Nestle"},
+        {"quantity":"2 cloves","name":"Garlic","brand":"Fresh"}
+      ]'
+      data-instructions='[
+        "Saute garlic and onion.",
+        "Add pumpkin and vegetable broth.",
+        "Cook until pumpkin becomes soft.",
+        "Blend until smooth.",
+        "Add cream and serve warm."
+      ]'
+    ></div>
+
+    <!-- Fusion Salad -->
+
+    <div
+      class="recipe-template"
+      data-title="Fusion Salad"
+      data-image="https://thefoodiebunch.sfo3.digitaloceanspaces.com/wp-content/uploads/2025/02/13140758/Roasted-Sweet-Potato-and-Black-Bean-Salad-1140x570.png"
+      data-tags="Salad,Healthy,Fusion"
+      data-description="Fresh vegetable salad with a sweet and tangy dressing."
+      data-ingredients='[
+        {"quantity":"1 cup","name":"Lettuce","brand":"Fresh"},
+        {"quantity":"1 pc","name":"Apple","brand":"Fresh"},
+        {"quantity":"1/2 cup","name":"Cherry tomatoes","brand":"Fresh"},
+        {"quantity":"1/4 cup","name":"Cheese cubes","brand":"Eden"},
+        {"quantity":"3 tbsp","name":"Salad dressing","brand":"Kewpie"}
+      ]'
+      data-instructions='[
+        "Wash and chop vegetables.",
+        "Slice apples and prepare cheese cubes.",
+        "Combine all ingredients in a bowl.",
+        "Pour dressing over the salad.",
+        "Toss and serve fresh."
+      ]'
+    ></div>
+
+    <!-- Adobong Manok -->
+
+    <div
+      class="recipe-template"
+      data-title="Adobong Manok"
+      data-image="https://cdn.apartmenttherapy.info/image/upload/f_jpg,q_auto:eco,c_fill,g_auto,w_1500,ar_1:1/k%2FPhoto%2FRecipes%2F2024-04-filipino-adobo%2Ffilipino-adobo-426"
+      data-tags="Filipino,Ulam,Chicken"
+      data-description="Traditional Filipino chicken adobo cooked in soy sauce and vinegar."
+      data-ingredients='[
+        {"quantity":"1 kg","name":"Chicken","brand":"Fresh"},
+        {"quantity":"1/2 cup","name":"Soy sauce","brand":"Silver Swan"},
+        {"quantity":"1/3 cup","name":"Vinegar","brand":"Datu Puti"},
+        {"quantity":"5 cloves","name":"Garlic","brand":"Fresh"},
+        {"quantity":"2 pcs","name":"Bay leaves","brand":"Fresh"}
+      ]'
+      data-instructions='[
+        "Marinate chicken in soy sauce and garlic.",
+        "Brown the chicken in a pan.",
+        "Add vinegar and spices.",
+        "Simmer until chicken becomes tender.",
+        "Serve with hot rice."
+      ]'
+    ></div>
+
+    <!-- Mais Con Yelo -->
+
+    <div
+      class="recipe-template"
+      data-title="Mais Con Yelo"
+      data-image="https://kanamit.com.ph/cdn/shop/files/IMG_8407.jpg?v=1690875208"
+      data-tags="Dessert,Cold,Filipino"
+      data-description="Sweet corn dessert with milk, shaved ice, and sugar."
+      data-ingredients='[
+        {"quantity":"2 cups","name":"Sweet corn kernels","brand":"Del Monte"},
+        {"quantity":"2 cups","name":"Crushed ice","brand":"Fresh"},
+        {"quantity":"1 cup","name":"Milk","brand":"Alaska"},
+        {"quantity":"3 tbsp","name":"Sugar","brand":"White King"},
+        {"quantity":"1 scoop","name":"Vanilla ice cream","brand":"Selecta"}
+      ]'
+      data-instructions='[
+        "Place corn kernels in a glass.",
+        "Add crushed ice.",
+        "Pour milk and sugar.",
+        "Top with vanilla ice cream.",
+        "Serve immediately."
+      ]'
+    ></div>
+
+    <!-- Maja Blanca -->
+
+    <div
+      class="recipe-template"
+      data-title="Maja Blanca"
+      data-image="https://www.kawalingpinoy.com/wp-content/uploads/2020/01/espesyal-maja-blanca-3.jpg"
+      data-tags="Dessert,Filipino,Coconut"
+      data-description="Creamy Filipino coconut pudding with corn kernels."
+      data-ingredients='[
+        {"quantity":"2 cups","name":"Coconut milk","brand":"Mama Sita"},
+        {"quantity":"1 cup","name":"Cornstarch","brand":"Royal"},
+        {"quantity":"1 can","name":"Corn kernels","brand":"Jolly"},
+        {"quantity":"1 cup","name":"Sugar","brand":"White King"},
+        {"quantity":"1 cup","name":"Evaporated milk","brand":"Alaska"}
+      ]'
+      data-instructions='[
+        "Mix coconut milk, evaporated milk, and sugar.",
+        "Add cornstarch and stir well.",
+        "Cook over low heat until thick.",
+        "Add corn kernels.",
+        "Transfer to tray and let cool before serving."
+      ]'
+    ></div>
+
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
+```
